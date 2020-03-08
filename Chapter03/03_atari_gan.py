@@ -6,7 +6,11 @@ import cv2
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from tensorboardX import SummaryWriter
+
+try:
+    from tensorboardX import SummaryWriter
+except:
+    from torch.utils.tensorboard import SummaryWriter
 
 import torchvision.utils as vutils
 
